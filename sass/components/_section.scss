@@ -1,0 +1,12 @@
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+
+  &:nth-child(4n) {
+    background-color: #f5f4fa;
+  }
+
+  &:nth-child(4n) {
+    background-color: var(--primary-background-color);
+  }
+}

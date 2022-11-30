@@ -1,0 +1,26 @@
+// utils styles
+@import "./utils/variables";
+@import "./utils/v-hidden";
+// base styles
+@import "./base/base";
+@import "./base/reset";
+// components styles
+@import "./components/section";
+@import "./components/container";
+@import "./components/typography";
+@import "./components/button";
+@import "./components/header";
+@import "./components/logo";
+@import "./components/hero";
+@import "./components/facts";
+@import "./components/about";
+@import "./components/team";
+@import "./components/socials";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/filters";
+@import "./components/portfolio";
+@import "./components/inputs";
+@import "./components/backdrop";
+@import "./components/modal";
+@import "./components/checkbox";
