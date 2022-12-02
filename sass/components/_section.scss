@@ -1,6 +1,6 @@
 .section {
   padding-top: 60px;
-    padding-bottom: 60px;
+  padding-bottom: 60px;
 
   &:nth-child(4n) {
     background-color: #f5f4fa;
@@ -10,7 +10,6 @@
     background-color: var(--primary-background-color);
   }
 }
-
 
 @media screen and (min-width: 1200px) {
   .section {

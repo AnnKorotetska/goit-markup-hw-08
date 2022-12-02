@@ -13,7 +13,7 @@ footer {
     margin-bottom: 0;
   }
 
-  .footer-form{
+  .footer-form {
     margin-top: 60px;
   }
 }
@@ -30,7 +30,6 @@ footer {
 .footer__item:not(:last-child) {
   margin-bottom: 8px;
 }
-
 
 @media screen and (min-width: 1200px) {
   .footer__item:not(:last-child) {
@@ -71,7 +70,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.footer-text-subscription{
+.footer-text-subscription {
   display: block;
   margin-bottom: 20px;
   font-weight: 700;

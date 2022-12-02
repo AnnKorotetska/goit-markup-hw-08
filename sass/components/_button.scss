@@ -76,7 +76,6 @@
   padding: 0;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  
 
   &:hover,
   &:focus {
@@ -84,7 +83,7 @@
   }
 }
 
-.close-btn-icon{
+.close-btn-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -94,7 +93,7 @@
 }
 
 .close-btn-icon:hover,
-.close-btn-icon:focus{
+.close-btn-icon:focus {
   fill: var(--accent-color);
 }
 
