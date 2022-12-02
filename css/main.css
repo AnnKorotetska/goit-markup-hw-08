@@ -1297,6 +1297,9 @@ footer {
     width: 358px;
     margin-right: 12px;
     margin-bottom: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
 }
 .form-field {
