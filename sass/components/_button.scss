@@ -51,7 +51,8 @@
   width: 200px;
   height: 50px;
   border: transparent;
-  margin-left: 12px;
+  margin-left: auto;
+  margin-right: auto;
   gap: 10px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -83,6 +84,14 @@
   }
 }
 
+.close-btn-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: currentColor;
+}
+
 .form-btn {
   display: block;
   align-items: center;
@@ -97,7 +106,7 @@
   cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  width: 200px;
+  min-width: 200px;
   height: 50px;
   border: transparent;
   margin: 30px auto 0 auto;

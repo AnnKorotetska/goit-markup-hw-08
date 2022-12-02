@@ -3,9 +3,34 @@ footer {
   background: var(--secondary-background-color);
 }
 
+.footer {
+  min-width: 231px;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    margin-bottom: 0;
+  }
+}
+
 .address-list {
   font-style: normal;
   line-height: 1.71;
+}
+
+.footer__item {
+  height: 21px;
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .address-link {
@@ -32,12 +57,24 @@ footer {
   color: var(--primary-white-color);
 }
 
-b {
+.footer-text {
   color: var(--primary-white-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-text-subscription{
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
 }
 
 .contact-link {
