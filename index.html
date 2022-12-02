@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -18,7 +19,7 @@
   </head>
   <body>
     <!--Шапка сайту-->
-    <header>
+    <header class="page-header">
       <div class="header-container container">
         <nav class="header-nav">
           <a class="logo link header-link" href="./"
@@ -39,26 +40,33 @@
             </li>
           </ul>
         </nav>
-        <div class="header-group">
-          <ul class="nav-list list">
-            <li class="header-contacts list">
-              <a
-                class="mail header-contact-link link"
-                href="mailto:info@devstudio.com"
-                ><svg class="header-mail" width="16" height="12">
-                  <use href="./img/icons.svg#mail"></use></svg
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="header-contacts list">
-              <a class="header-contact-link link" href="tel:+380961111111"
-                ><svg class="header-tell" width="10" height="16">
-                  <use href="./img/icons.svg#tell"></use></svg
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
+        <ul class="contact-list list">
+          <li class="header-contacts list">
+            <a
+              class="mail header-contact-link link"
+              href="mailto:info@devstudio.com"
+              ><svg class="header-mail" width="16" height="12">
+                <use href="./img/icons.svg#mail"></use></svg
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="header-contacts list">
+            <a class="header-contact-link link" href="tel:+380961111111"
+              ><svg class="header-tell" width="10" height="16">
+                <use href="./img/icons.svg#tell"></use></svg
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle__icon" width="40" height="40">
+            <use href="./img/icons.svg#toggle-icon"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -173,12 +181,35 @@
           <h3 class="title">Наша команда</h3>
           <ul class="team-list list">
             <li class="card-list">
-              <img
-                src="./img/member1.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/ihor-desk-270.jpg 270w,
+                    ./img/ihor-desk-540.jpg 540w,
+                    ./img/ihor-desk-810.jpg 810w
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/ihor-tab-354.jpg   354w,
+                    ./img/ihor-tab-708.jpg   708w,
+                    ./img/ihor-tab-1062.jpg 1062w
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  srcset="
+                    ./img/ihor-mob-450.jpg   450w,
+                    ./img/ihor-mob-900.jpg   900w,
+                    ./img/ihor-mob-1350.jpg 1350w
+                  "
+                  src="./img/ihor-mob-450.jpg"
+                  sizes="(min-width: 1600px) 15vw, (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt="Ігор Дем'яненко"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="name-title">Ігор Дем'яненко</h3>
                 <p class="team-text">Product Designer</p>
@@ -242,12 +273,35 @@
               </div>
             </li>
             <li class="card-list">
-              <img
-                src="./img/member2.jpg"
-                alt="Ольга Рєпіна"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/olha-desk-270.jpg 270w,
+                    ./img/olha-desk-540.jpg 540w,
+                    ./img/olha-desk-810.jpg 810w
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/olha-tab-354.jpg   354w,
+                    ./img/olha-tab-708.jpg   708w,
+                    ./img/olha-tab-1062.jpg 1062w
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  srcset="
+                    ./img/olha-mob-450.jpg   450w,
+                    ./img/olha-mob-900.jpg   900w,
+                    ./img/olha-mob-1350.jpg 1350w
+                  "
+                  src="./img/olha-mob-450.jpg"
+                  sizes="(min-width: 1600px) 15vw, (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt="Ольга Рєпіна"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="name-title">Ольга Рєпіна</h3>
                 <p class="team-text">Frontend Developer</p>
@@ -311,12 +365,35 @@
               </div>
             </li>
             <li class="card-list">
-              <img
-                src="./img/member3.jpg"
-                alt="Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/mykola-desk-270.jpg 270w,
+                    ./img/mykola-desk-540.jpg 540w,
+                    ./img/mykola-desk-810.jpg 810w
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/mykola-tab-354.jpg   354w,
+                    ./img/mykola-tab-708.jpg   708w,
+                    ./img/mykola-tab-1062.jpg 1062w
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  srcset="
+                    ./img/mykola-mob-450.jpg   450w,
+                    ./img/mykola-mob-900.jpg   900w,
+                    ./img/mykola-mob-1350.jpg 1350w
+                  "
+                  src="./img/mykola-mob-450.jpg"
+                  sizes="(min-width: 1600px) 15vw, (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt="Микола Тарасов"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="name-title">Микола Тарасов</h3>
                 <p class="team-text">Marketing</p>
@@ -380,12 +457,35 @@
               </div>
             </li>
             <li class="card-list">
-              <img
-                src="./img/member4.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/mihaylo-desk-270.jpg 270w,
+                    ./img/mihaylo-desk-540.jpg 540w,
+                    ./img/mihaylo-desk-810.jpg 810w
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./img/mihaylo-tab-354.jpg   354w,
+                    ./img/mihaylo-tab-708.jpg   708w,
+                    ./img/mihaylo-tab-1062.jpg 1062w
+                  "
+                  media="(min-width:768px)"
+                />
+
+                <img
+                  srcset="
+                    ./img/mihaylo-mob-450.jpg   450w,
+                    ./img/mihaylo-mob-900.jpg   900w,
+                    ./img/mihaylo-mob-1350.jpg 1350w
+                  "
+                  src="./img/mihaylo-mob-450.jpg"
+                  sizes="(min-width: 1600px) 15vw, (min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  alt="Микола Тарасов"
+                />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="name-title">Михайло Єрмаков</h3>
                 <p class="team-text">UI Designer</p>
@@ -512,7 +612,7 @@
           >
           <address>
             <ul class="footer-address address-list link list">
-              <li class="link">
+              <li class="footer__item link">
                 <a
                   class="address-link list link street"
                   href="https://goo.gl/maps/mnTzUHoqRGB6futn6"
@@ -536,7 +636,7 @@
         </div>
 
         <div class="footer-socials">
-          <b>приєднуйтесь</b>
+          <p class="footer-text">приєднуйтесь</p>
           <ul class="socials list">
             <li class="socials-item">
               <a
@@ -597,16 +697,14 @@
         </div>
 
         <div>
-          <b>Підпишіться на розсилку</b>
           <form class="footer-form" name="subscription-form" autocomplete="on">
-            <label>
-              <input
-                class="footer-form-input"
-                name="Email"
-                type="email"
-                placeholder="E-mail"
-              />
-            </label>
+            <p class="footer-text-subscription">Підпишіться на розсилку</p>
+            <input
+              class="footer-form-input"
+              name="Email"
+              type="email"
+              placeholder="E-mail"
+            />
             <button class="btn footer-btn" type="submit">
               Підписатися
               <svg class="plane" width="24" height="24">
@@ -625,40 +723,39 @@
             <use href="./img/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+
         <form class="modal-form">
-          <div class="form-group">
-            <label class="form-field">
-              <span class="form-label">Ім'я</span>
-              <input class="form-input" type="text" name="username" />
-              <svg class="form-icon" width="18" height="18">
-                <use href="./img/icons.svg#person"></use>
-              </svg>
-            </label>
-            <label class="form-field">
-              <span class="form-label">Телефон</span>
-              <input class="form-input" type="text" name="phone-number" />
-              <svg class="form-icon" width="18" height="18">
-                <use href="./img/icons.svg#phone"></use>
-              </svg>
-            </label>
-            <label class="form-field">
-              <span class="form-label">Пошта</span>
-              <input class="form-input" type="text" name="user-email" />
-              <svg class="form-icon" width="18" height="18">
-                <use href="./img/icons.svg#email"></use>
-              </svg>
-            </label>
-            <label class="form-field">
-              <span class="form-label">Коментар</span>
-              <textarea
-                class="form-message"
-                name="comments-form"
-                placeholder="Введіть текст"
-                rows="7"
-              ></textarea>
-            </label>
-          </div>
+          <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+          <label class="form-field">
+            <span class="form-label">Ім'я</span>
+            <input class="form-input" type="text" name="username" />
+            <svg class="form-icon" width="18" height="18">
+              <use href="./img/icons.svg#person"></use>
+            </svg>
+          </label>
+          <label class="form-field">
+            <span class="form-label">Телефон</span>
+            <input class="form-input" type="text" name="phone-number" />
+            <svg class="form-icon" width="18" height="18">
+              <use href="./img/icons.svg#phone"></use>
+            </svg>
+          </label>
+          <label class="form-field">
+            <span class="form-label">Пошта</span>
+            <input class="form-input" type="text" name="user-email" />
+            <svg class="form-icon" width="18" height="18">
+              <use href="./img/icons.svg#email"></use>
+            </svg>
+          </label>
+          <label class="form-field">
+            <span class="form-label">Коментар</span>
+            <textarea
+              class="form-message"
+              name="comments-form"
+              placeholder="Введіть текст"
+              rows="7"
+            ></textarea>
+          </label>
           <label class="form-agreement">
             <input
               class="form-checkbox"
@@ -681,6 +778,81 @@
         </form>
       </div>
     </div>
-    <script src="./modal.js"></script>
+    <!--Мобільне меню-->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="menu-close-icon" width="40" height="40">
+          <use href="./images/icons.svg#close-btn-menu"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-nav list">
+        <li class="mobile-nav__item">
+          <a href="./index.html" class="mobile-nav__link link">Студія</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="./portfolio.html" class="mobile-nav__link link">Портфоліо</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="" class="mobile-nav__link link">Контакти</a>
+        </li>
+      </ul>
+      <ul class="mobile-contact list">
+        <li class="mobile-contact__item">
+          <a
+            href="tel:+380961111111"
+            class="mobile-contact__link mobile-contact__link--large link"
+          >
+            +38 096 111 11 11</a
+          >
+        </li>
+        <li class="mobile-contact-list__item">
+          <a href="mailto:info@devstudio.com" class="mobile-contact__link link">
+            info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="networks-list list">
+        <li class="networks-list__item">
+          <a
+            href="https://www.instagram.com/"
+            class="networks-list__link link"
+            rel="noopener nofollow norefferrer"
+            target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li class="networks-list__item">
+          <a
+            href="https://www.twitter.com/"
+            class="networks-list__link link"
+            rel="noopener nofollow norefferrer"
+            target="_blank"
+            >Twitter</a
+          >
+        </li>
+        <li class="networks-list__item">
+          <a
+            href="https://www.facebook.com/"
+            class="networks-list__link link"
+            rel="noopener nofollow norefferrer"
+            target="_blank"
+            >Facebook</a
+          >
+        </li>
+        <li class="networks-list__item">
+          <a
+            href="https://www.linkedin.com/"
+            class="networks-list__link link"
+            rel="noopener nofollow norefferrer"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
