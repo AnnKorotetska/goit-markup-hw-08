@@ -14,7 +14,10 @@
   }
 }
 
-
+.header-mail,
+.header-tell {
+  margin-right: 10px;
+}
 
 
 .header-link {
@@ -117,6 +120,7 @@
   .header-contact-link:not(:last-child) {
     margin-right: 50px;
     margin-bottom: 0;
+  
   }
 }
 
@@ -170,7 +174,8 @@
             line-height: 14px;
             letter-spacing: 0.02em;
             color: var(--primary-text-color);
-            
+            display: flex;
+            align-items: center;
           }
         
     }
@@ -184,7 +189,8 @@
                   line-height: 14px;
                   letter-spacing: 0.02em;
                   color: var(--primary-text-color);
-              
+                display: flex;
+                align-items: center;
               }
 } 
     

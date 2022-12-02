@@ -12,6 +12,10 @@ footer {
   .footer {
     margin-bottom: 0;
   }
+
+  .footer-form{
+    margin-top: 60px;
+  }
 }
 
 .address-list {
@@ -26,6 +30,7 @@ footer {
 .footer__item:not(:last-child) {
   margin-bottom: 8px;
 }
+
 
 @media screen and (min-width: 1200px) {
   .footer__item:not(:last-child) {
